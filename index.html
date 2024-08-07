@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Fakura Portfolio">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Fakura Portfolio">
+  <link rel="apple-touch-icon" href="icons/logo.svg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="icons/logo.svg"/>
+
+  <title>Fakura Portfolio</title>
+  <link rel="manifest" href="manifest.json">
+
+  <script>
+    // The value below is injected by flutter build, do not touch.
+    var serviceWorkerVersion = '"1101611150"';
+  </script>
+  <!-- This script adds the flutter initialization JS code -->
+  <script src="flutter.js" defer></script>
+  <style>
+    body {
+      background-color: #EAEFF0;
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .loading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    /* Optional: You can adjust the size of the gif container */
+    .typing-gif {
+      width: 130px;
+      height: 130px;
+      opacity: 0; /* Initial opacity set to 0 */
+      animation: fadeIn 1s ease-in-out forwards, fadeOut 1s ease-in-out 2s forwards; /* Fade-in and fade-out animations */
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeOut {
+      0% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="loading">
+    <img class="typing-gif" src="typing.gif" alt="Typing Animation">
+  </div>
+
+  <script src="main.dart.js" type="application/javascript"></script>
+  <!-- <script src="flutter_bootstrap.js" async></script> -->
+  <!-- <script>
+    window.addEventListener('load', function(ev) {
+      // Download main.dart.js
+      _flutter.loader.load({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        }
+      }).then(function(engineInitializer) {
+        return engineInitializer.initializeEngine();
+      }).then(function(appRunner) {
+        // Fade-in and fade-out effects completed, then run the app
+        document.querySelector('.typing-gif').style.animation = 'none';
+        return appRunner.runApp();
+      });
+    });
+  </script> -->
+</body>
+</html>
